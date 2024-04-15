@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.scss'
 import { useState } from 'react'
 import { Contactform } from '@/components/Form'
 
@@ -16,82 +15,92 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`main ${ inter.className }`}>
-        <h1>Super mega petrecere de 30 de ani</h1>
-        <p>Salutare,</p>
-        <p>Tocmai ai fost invitat la ziua mea (Marian). Este un eveniment foarte ambitios, aproape unic in viata mea, in care voi incerca sa aduc impreuna oamenii din toate grupurile mele de prieteni pentru a ne bucura impreuna ca exist in viata lor. 
-        Unii m-au intrebat daca este ca o nunta, sau doar m-au intrebat de ce fac asta?</p>
-        <h2><strong>Pe scurt</strong></h2>
-        <p>Imi place sa organizez iesiri, activitati sau baute si ma bucra foarte mult atunci cand oamenii din jurul meu se distreaza si se simt bine.</p>
-        <p>Vreau sa tariesc din plin aceste sentimente, si ce ocazie mai buna decat ziua in care trec spre o varsta destul de serioasa.</p>
+      <div className="lg:flex lg:fixed lg:inset-0 lg:pointer-events-none">
+        <div className="lg:grow-0 lg:shrink-0 lg:basis-[60%]" />
+        <div className="lg:grow lg:shrink lg:basis-0 relative bg-black">
+            <Image className='max-lg:!static max-lg:!h-auto object-cover lg:opacity-50' src="/background.avif" alt={''} fill={ true } />
+          </div>
+      </div>
+      <div className='flex'>
+        <main className={`main max-w-[1280px] lg:grow-0 lg:shrink-0 lg:basis-[60%] ${ inter.className }`}>
+          <h1>Super mega petrecere de 30 de ani</h1>
+          <p>Salutare,</p>
+          <p>Tocmai ai fost invitat la ziua mea (Marian). Este un eveniment foarte ambitios, aproape unic in viata mea, in care voi incerca sa aduc impreuna oamenii din toate grupurile mele de prieteni pentru a ne bucura impreuna ca exist in viata lor. 
+          Unii m-au intrebat daca este ca o nunta, sau doar m-au intrebat de ce fac asta?</p>
+          <h2><strong>Pe scurt</strong></h2>
+          <p>Imi place sa organizez iesiri, activitati sau baute si ma bucra foarte mult atunci cand oamenii din jurul meu se distreaza si se simt bine.</p>
+          <p>Vreau sa tariesc din plin aceste sentimente, si ce ocazie mai buna decat ziua in care trec spre o varsta destul de serioasa.</p>
 
-        <h2>Detalii logistice</h2>
+          <h2>Detalii logistice</h2>
 
-        <h3>Data si ora</h3>
-        <p>15 Iunie, incepand cu ora 20:00.</p>
+          <h3>Data si ora</h3>
+          <p>15 Iunie, incepand cu ora 20:00.</p>
 
-        <h3>Locatia</h3>
-        <p>Sediul Thinslices, fosta cladire Muzeul teatrului.</p>
-        <p>https://maps.app.goo.gl/q9p3Kvptviha96eP7</p>
+          <h3>Locatia</h3>
+          <p>Sediul Thinslices, fosta cladire Muzeul teatrului.</p>
+          <p><a href="https://maps.app.goo.gl/q9p3Kvptviha96eP7" target="_blank">https://maps.app.goo.gl/q9p3Kvptviha96eP7</a></p>
 
-        <div>
-          Poze cu locatia
-        </div>
+          <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+            { Array.from({ length: 6 }, () => <>
+              <div className="h-[20vh] bg-slate-400"></div>
+            </> ) }
+          </div>
 
-        <h2>Meniu</h2>
-        <p>Preparate pe baza de malt, hamei, gin, rom, whiskey si vodka.</p>
+          <h2>Meniu</h2>
+          <p>Preparate pe baza de malt, hamei, gin, rom, whiskey si vodka.</p>
 
-        <h2>Activitati</h2>
-        <ul>
-          <li>Baut inauntru, baut afara, muzica si caterinca.</li>
-          <li>Retro dancing moment cu muzica romaneasca aleasa de sarbatorit.</li>
-        </ul>
+          <h2>Activitati</h2>
+          <ul>
+            <li>Baut inauntru, baut afara, muzica si caterinca.</li>
+            <li>Retro dancing moment cu muzica romaneasca aleasa de sarbatorit.</li>
+          </ul>
 
-        <h2>Dress code</h2>
-        <p>Green</p>
+          <h2>Dress code</h2>
+          <p>Green</p>
 
-        <h2>Confirmare prezenta:</h2>
-        <p>Daca stii foarte, foarte sigur ca ajungi m-ar ajuta osa confirmi prezenta prin formularul de mai jos.</p>
-        <p>Daca esti surprins de aceasta invitatie si nu stii sigur daca poti sa vrei sa vii, m-ar ajuta o confirmare pana pe data de 27 Mai.</p>
-        <p>Daca vei pierde acest link, poti sa imi confirmi prin messenger, intsagram, whatsapp, messenger raven sau telefon (0756214145).</p>
+          <h2>Confirmare prezenta:</h2>
+          <p>Daca stii foarte, foarte sigur ca ajungi m-ar ajuta osa confirmi prezenta prin formularul de mai jos.</p>
+          <p>Daca esti surprins de aceasta invitatie si nu stii sigur daca poti sa vrei sa vii, m-ar ajuta o confirmare pana pe data de 27 Mai.</p>
+          <p>Daca vei pierde acest link, poti sa imi confirmi prin messenger, intsagram, whatsapp, messenger raven sau telefon (0756214145).</p>
 
 
-        <div>
-          <Contactform />
-        </div>
+          <div>
+            <Contactform />
+          </div>
 
-        <h2>FAQ</h2>
-        <div>
-          <QA 
-            q={ `Am auzit ca ai un whishlist pentru cadouri?` } 
-            a={ `Da. Daca iti doresti sa primesti acces la whishlist si informatii despre ce cadouri s-au mai luat, te rog sa iei legatura cu Claudia (sormea).` } 
-          />
-          <QA
-            q={ `Este loc de parcare?` }
-            a={ `Destul de greu cu parcarea in centru, deci sfatul meu este sa nu vii cu masina.` }
-          />
-          <QA
-            q={ `Suntem un cuplu si am primit amandoi invitatie, se mai aplica +1?` }
-            a={ `Da, puteti veni fiecare cu +1 diferit de partenerul actual.` }
-          />
-          <QA
-            q={ `Vor fi si bauturi fara alcool?` }
-            a={ `Da. Apa :)))` }
-          />
-          <QA
-            q={ `Am mai vazut acest tip de invitatie undeva?` }
-            a={ `Da, m-am insprirat de la Flavian C.` }
-          />
-          <QA
-            q={ `Ai facut tu aceasta invitatie?` }
-            a={ `Nu, m-a ajutat Razvan O.` }
-          />
-          <QA
-            q={ `Putem veni cu +2?` }
-            a={ `Doar daca sunteti intr-o relatie serioasa.` }
-          />
-        </div>
-      </main>
+          <h2>FAQ</h2>
+          <div className='space-y-4'>
+            <QA 
+              q={ `Am auzit ca ai un whishlist pentru cadouri?` } 
+              a={ `Da. Daca iti doresti sa primesti acces la whishlist si informatii despre ce cadouri s-au mai luat, te rog sa iei legatura cu Claudia (sormea).` } 
+            />
+            <QA
+              q={ `Este loc de parcare?` }
+              a={ `Destul de greu cu parcarea in centru, deci sfatul meu este sa nu vii cu masina.` }
+            />
+            <QA
+              q={ `Suntem un cuplu si am primit amandoi invitatie, se mai aplica +1?` }
+              a={ `Da, puteti veni fiecare cu +1 diferit de partenerul actual.` }
+            />
+            <QA
+              q={ `Vor fi si bauturi fara alcool?` }
+              a={ `Da. Apa :)))` }
+            />
+            <QA
+              q={ `Am mai vazut acest tip de invitatie undeva?` }
+              a={ `Da, m-am insprirat de la Flavian C.` }
+            />
+            <QA
+              q={ `Ai facut tu aceasta invitatie?` }
+              a={ `Nu, m-a ajutat Razvan O.` }
+            />
+            <QA
+              q={ `Putem veni cu +2?` }
+              a={ `Doar daca sunteti intr-o relatie serioasa.` }
+            />
+          </div>
+        </main>
+      </div>
     </>
   )
 }
@@ -106,10 +115,15 @@ const QA:React.FC<QAProps> = props => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className={ `group py-4 ${ open ? 'is-open' : '' }` }>
-      <div className="font-bold cursor-pointer" onClick={() => setOpen(!open)}>{q}</div>
+    <div className={ `group border border-b-2 rounded-md p-4 ${ open ? 'is-open' : '' }` }>
+      <div className="font-bold cursor-pointer flex gap-4 justify-between items-center" onClick={() => setOpen(!open)}>
+        <span>{q}</span>
+        <div className='group-[.is-open]:rotate-180'>
+          <div className='w-2 h-2 rounded-sm border-r-2 border-b-2 border-neutral-400 rotate-45 -translate-y-1/4'/>
+        </div>
+      </div>
       <div className="grid grid-rows-[0fr] group-[.is-open]:grid-rows-[1fr] transition-all">
-        <div className="overflow-hidden">{a}</div>
+        <div className="overflow-hidden">{a}</div> 
       </div>
     </div>
   )

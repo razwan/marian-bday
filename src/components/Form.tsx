@@ -62,7 +62,7 @@ import {
       });
     };
     return (
-      <div className="bg-neutral-50 border rounded-lg p-8">
+      <div className="bg-neutral-50 border rounded-lg p-8 text-base">
         <GoogleFormProvider { ...methods }>
           <form id="ContactForm" onSubmit={ methods.handleSubmit(onSubmit) }>
             <div className='space-y-8'>
