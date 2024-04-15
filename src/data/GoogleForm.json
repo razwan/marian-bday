@@ -1,0 +1,116 @@
+{
+    "fvv": 1,
+    "pageHistory": 0,
+    "fbzx": "5350167321057056214",
+    "action": "e/1FAIpQLSfvE3Wbf3X06EDWmfDJCL14f-9GJE37rEKKfit1BkEjk4qqtw",
+    "title": "RSVP form - 30 party",
+    "description": null,
+    "fields": [
+        {
+            "label": "Nume",
+            "description": null,
+            "type": "SHORT_ANSWER",
+            "id": "662552907",
+            "required": false
+        },
+        {
+            "label": "Confirmi prezenta",
+            "description": null,
+            "type": "CHECKBOX",
+            "id": "680857486",
+            "options": [
+                {
+                    "label": "Da",
+                    "custom": false
+                },
+                {
+                    "label": "Nu",
+                    "custom": false
+                }
+            ],
+            "required": false
+        },
+        {
+            "label": "Vii cu +1?",
+            "description": null,
+            "type": "CHECKBOX",
+            "id": "1237840419",
+            "options": [
+                {
+                    "label": "Da",
+                    "custom": false
+                },
+                {
+                    "label": "Nu",
+                    "custom": false
+                }
+            ],
+            "required": false
+        },
+        {
+            "label": "Vrei sa iti trimit invite in calendar?",
+            "description": null,
+            "type": "CHECKBOX",
+            "id": "1948574545",
+            "options": [
+                {
+                    "label": "Da",
+                    "custom": false
+                },
+                {
+                    "label": "Nu",
+                    "custom": false
+                }
+            ],
+            "required": false
+        },
+        {
+            "label": "Pe ce email sa iti trimit invite in calendar?",
+            "description": null,
+            "type": "SHORT_ANSWER",
+            "id": "59818467",
+            "required": false
+        },
+        {
+            "label": "+1 vrea sa ii trimit invite in calendar?",
+            "description": null,
+            "type": "CHECKBOX",
+            "id": "330377857",
+            "options": [
+                {
+                    "label": "Da",
+                    "custom": false
+                },
+                {
+                    "label": "Nu",
+                    "custom": false
+                }
+            ],
+            "required": false
+        },
+        {
+            "label": "Pe ce email sa trimit invite in calendar pentru +1?",
+            "description": null,
+            "type": "SHORT_ANSWER",
+            "id": "389438953",
+            "required": false
+        },
+        {
+            "label": "Ai preferinte la licori?",
+            "description": null,
+            "type": "LONG_ANSWER",
+            "id": "1850514433",
+            "required": false
+        }
+    ],
+    "fieldsOrder": {
+        "59818467": 4,
+        "330377857": 5,
+        "389438953": 6,
+        "662552907": 0,
+        "680857486": 1,
+        "1237840419": 2,
+        "1850514433": 7,
+        "1948574545": 3
+    }
+}

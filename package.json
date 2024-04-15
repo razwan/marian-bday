@@ -18,6 +18,13 @@
     "next": "14.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-google-forms-hooks": "^1.2.4",
+    "sass": "^1.75.0",
     "typescript": "5.4.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
   }
 }

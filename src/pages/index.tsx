@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import styles from '@/styles/Home.module.scss'
+import { useState } from 'react'
+import { Contactform } from '@/components/Form'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,110 +16,101 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
+      <main className={`main ${ inter.className }`}>
+        <h1>Super mega petrecere de 30 de ani</h1>
+        <p>Salutare,</p>
+        <p>Tocmai ai fost invitat la ziua mea (Marian). Este un eveniment foarte ambitios, aproape unic in viata mea, in care voi incerca sa aduc impreuna oamenii din toate grupurile mele de prieteni pentru a ne bucura impreuna ca exist in viata lor. 
+        Unii m-au intrebat daca este ca o nunta, sau doar m-au intrebat de ce fac asta?</p>
+        <h2><strong>Pe scurt</strong></h2>
+        <p>Imi place sa organizez iesiri, activitati sau baute si ma bucra foarte mult atunci cand oamenii din jurul meu se distreaza si se simt bine.</p>
+        <p>Vreau sa tariesc din plin aceste sentimente, si ce ocazie mai buna decat ziua in care trec spre o varsta destul de serioasa.</p>
+
+        <h2>Detalii logistice</h2>
+
+        <h3>Data si ora</h3>
+        <p>15 Iunie, incepand cu ora 20:00.</p>
+
+        <h3>Locatia</h3>
+        <p>Sediul Thinslices, fosta cladire Muzeul teatrului.</p>
+        <p>https://maps.app.goo.gl/q9p3Kvptviha96eP7</p>
+
+        <div>
+          Poze cu locatia
         </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
+        <h2>Meniu</h2>
+        <p>Preparate pe baza de malt, hamei, gin, rom, whiskey si vodka.</p>
+
+        <h2>Activitati</h2>
+        <ul>
+          <li>Baut inauntru, baut afara, muzica si caterinca.</li>
+          <li>Retro dancing moment cu muzica romaneasca aleasa de sarbatorit.</li>
+        </ul>
+
+        <h2>Dress code</h2>
+        <p>Green</p>
+
+        <h2>Confirmare prezenta:</h2>
+        <p>Daca stii foarte, foarte sigur ca ajungi m-ar ajuta osa confirmi prezenta prin formularul de mai jos.</p>
+        <p>Daca esti surprins de aceasta invitatie si nu stii sigur daca poti sa vrei sa vii, m-ar ajuta o confirmare pana pe data de 27 Mai.</p>
+        <p>Daca vei pierde acest link, poti sa imi confirmi prin messenger, intsagram, whatsapp, messenger raven sau telefon (0756214145).</p>
+
+
+        <div>
+          <Contactform />
+        </div>
+
+        <h2>FAQ</h2>
+        <div>
+          <QA 
+            q={ `Am auzit ca ai un whishlist pentru cadouri?` } 
+            a={ `Da. Daca iti doresti sa primesti acces la whishlist si informatii despre ce cadouri s-au mai luat, te rog sa iei legatura cu Claudia (sormea).` } 
           />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
+          <QA
+            q={ `Este loc de parcare?` }
+            a={ `Destul de greu cu parcarea in centru, deci sfatul meu este sa nu vii cu masina.` }
+          />
+          <QA
+            q={ `Suntem un cuplu si am primit amandoi invitatie, se mai aplica +1?` }
+            a={ `Da, puteti veni fiecare cu +1 diferit de partenerul actual.` }
+          />
+          <QA
+            q={ `Vor fi si bauturi fara alcool?` }
+            a={ `Da. Apa :)))` }
+          />
+          <QA
+            q={ `Am mai vazut acest tip de invitatie undeva?` }
+            a={ `Da, m-am insprirat de la Flavian C.` }
+          />
+          <QA
+            q={ `Ai facut tu aceasta invitatie?` }
+            a={ `Nu, m-a ajutat Razvan O.` }
+          />
+          <QA
+            q={ `Putem veni cu +2?` }
+            a={ `Doar daca sunteti intr-o relatie serioasa.` }
+          />
         </div>
       </main>
     </>
+  )
+}
+
+type QAProps = {
+  q: string,
+  a: string
+}
+
+const QA:React.FC<QAProps> = props => {
+  const {q, a} = props;
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className={ `group py-4 ${ open ? 'is-open' : '' }` }>
+      <div className="font-bold cursor-pointer" onClick={() => setOpen(!open)}>{q}</div>
+      <div className="grid grid-rows-[0fr] group-[.is-open]:grid-rows-[1fr] transition-all">
+        <div className="overflow-hidden">{a}</div>
+      </div>
+    </div>
   )
 }
