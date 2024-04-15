@@ -17,8 +17,8 @@ export default function Home() {
       </Head>
       <div className="lg:flex lg:fixed lg:inset-0 lg:pointer-events-none">
         <div className="lg:grow-0 lg:shrink-0 lg:basis-[60%]" />
-        <div className="lg:grow lg:shrink lg:basis-0 relative bg-black">
-            <Image className='max-lg:!static max-lg:!h-auto object-cover lg:opacity-50' src="/background.avif" alt={''} fill={ true } />
+        <div className="lg:grow lg:shrink lg:basis-0 relative">
+            <Image className='max-lg:!static max-lg:!h-auto object-cover max-lg:max-h-[25vh]' src="/background.avif" alt={''} fill={ true } />
           </div>
       </div>
       <div className='flex'>
