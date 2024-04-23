@@ -109,7 +109,7 @@ export default function Home() {
           </p>
           <p>
             Daca esti surprins de aceasta invitatie si nu stii sigur daca poti
-            sa vrei sa vii, m-ar ajuta o confirmare pana pe data de 27 Mai.
+            si vrei sa vii, m-ar ajuta o confirmare pana pe data de 27 Mai.
           </p>
           <p>
             Daca vei pierde acest link, poti sa imi confirmi prin messenger,
